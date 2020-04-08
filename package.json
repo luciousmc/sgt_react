@@ -1,0 +1,20 @@
+{
+  "name": "sgt_react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luciousmc/sgt_react.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luciousmc/sgt_react/issues"
+  },
+  "homepage": "https://github.com/luciousmc/sgt_react#readme"
+}
