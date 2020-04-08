@@ -1,4 +1,5 @@
 const path = require('path');
+require('dotenv/config');
 
 const srcFolder = path.resolve(__dirname, 'client');
 const publicFolder = path.resolve(__dirname, 'server/public');
@@ -27,5 +28,16 @@ module.exports = {
         }
       }
     ]
+  },
+  devServer: {
+    contentBase: publicFolder,
+    historyApiFallback: true,
+    port: process.env.DEV_SERVER_PORT,
+    watchContentBase: true,
+    host: '0.0.0.0',
+    proxy: {
+      '/api': `localhost:${process.env.PORT}`
+    },
+    stats: 'minimal'
   }
 };
