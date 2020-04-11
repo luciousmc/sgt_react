@@ -1,11 +1,12 @@
 import React from 'react';
-import CssBaseline from '@material-ui/core/CssBaseline';
+import Header from './header';
 
 const App = () => {
   return(
-    <CssBaseline>
-      <h1>React SGT !</h1>
-    </CssBaseline>
+    <>
+      <Header />
+    </>
+    
   );
 };
 
