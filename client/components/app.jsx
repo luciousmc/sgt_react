@@ -1,8 +1,11 @@
 import React from 'react';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 const App = () => {
   return(
-    <h1>React SGT !</h1>
+    <CssBaseline>
+      <h1>React SGT !</h1>
+    </CssBaseline>
   );
 };
 
