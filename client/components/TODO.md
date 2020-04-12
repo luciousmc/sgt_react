@@ -6,14 +6,14 @@
 
 - [ ] First Name
 - [ ] Last Name
+- [ ] S.S.N.
+- [ ] D.O.B.
 - [ ] Phone Number
 - [ ] Address
   - [ ] Street
   - [ ] City
   - [ ] State
   - [ ] Zipcode
-- [ ] D.O.B.
-- [ ] S.S.N.
 - [ ] Email Address
 - [ ] CHHA Certificat Number
 - [ ] CHHA Certificate Expiration Date
