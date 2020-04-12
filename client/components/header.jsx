@@ -27,7 +27,7 @@ const Header = ({ setView }) => {
 };
 
 Header.propTypes = {
-  setView: PropTypes.func.required
+  setView: PropTypes.func.isRequired
 }
 
 export default Header;

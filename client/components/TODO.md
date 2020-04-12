@@ -4,16 +4,17 @@
 
 ### Information needed for Database
 
-- [ ] First Name
-- [ ] Last Name
-- [ ] S.S.N.
+- [x] First Name
+- [x] Middle Initial
+- [x] Last Name
+- [x] S.S.N.
 - [ ] D.O.B.
 - [ ] Phone Number
-- [ ] Address
-  - [ ] Street
-  - [ ] City
-  - [ ] State
-  - [ ] Zipcode
+- [x] Address
+  - [x] Street
+  - [x] City
+  - [x] State
+  - [x] Zipcode
 - [ ] Email Address
 - [ ] CHHA Certificat Number
 - [ ] CHHA Certificate Expiration Date

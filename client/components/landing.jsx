@@ -44,7 +44,7 @@ const Landing = ({ setView }) => {
 };
 
 Landing.propTypes = {
-  setView: PropTypes.func.required
+  setView: PropTypes.func.isRequired
 }
 
 export default Landing;

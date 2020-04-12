@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { Stepper, Step, StepLabel, Button, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import PersonalInfoContainer from './personal-info-container';
+import CertificationContainer from './certification-container';
+import WorkInfoContainer from './work-info-container';
+import ReviewContainer from './review-container';
 
 
 const getSteps = () => {
@@ -39,6 +42,10 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(1),
     marginBottom: theme.spacing(1),
   },
+  renderForm: {
+    display: 'flex',
+    justifyContent: 'center'
+  }
 }));
 
 const RegistrationStepper = () => {
@@ -75,7 +82,11 @@ const RegistrationStepper = () => {
           </div>
         ) : (
           <div>
-            <Typography className={classes.instructions}>{getStepContent(activeStep)}</Typography>
+            {
+              activeStep < 3
+                ? <div className={classes.renderForm}>{getStepContent(activeStep)}</div>
+                : <Typography className={classes.instructions} align='center'>{getStepContent(activeStep)}</Typography>
+            }
             <div>
               <Button
                 disabled={activeStep === 0}
