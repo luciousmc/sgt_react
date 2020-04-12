@@ -4,15 +4,23 @@ import { Container } from '@material-ui/core';
 import Header from './header';
 import Register from './register';
 import Login from './login';
+import { makeStyles } from '@material-ui/core/styles';
 
+const useStyles = makeStyles({
+  root: {
+    width: '80%'
+  }
+});
 
 const App = () => {
   const [ view, setView ] = useState('landing');
 
+  const classes = useStyles();
+  
   return(
     <React.Fragment>
-      <Header />
-      <Container maxWidth='md' >
+      <Header setView={setView} />
+      <Container className={classes.root} maxWidth='md'>
         {
           view === 'landing'
             ? <Landing setView={setView} />

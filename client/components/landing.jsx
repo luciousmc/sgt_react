@@ -1,19 +1,21 @@
 import React from 'react';
-import { Container, Paper, Typography, Grid, Link } from '@material-ui/core';
+import { Paper, Typography, Grid, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import PropTypes from 'prop-types';
 
 const useStyles = makeStyles({
   root: {
-    width: '80%'
-  },
-  paper: {
-    height: 600,
     padding: 20,
     marginTop: 50
   },
   sectionTitle: {
     marginTop: 20,
     padding: 15
+  },
+  button: {
+    padding: 30,
+    fontSize: '1.6rem',
+    margin: 10
   }
 });
 
@@ -21,30 +23,28 @@ const Landing = ({ setView }) => {
   const classes = useStyles();
   
   return(
-    <Container className={classes.root} maxWidth='md'>
-      <Paper className={classes.paper}>
-        <Typography variant='h4' align='center' gutterBottom>
-          Welcome! Choose an option below
-        </Typography>
-        <Grid container>
-          <Grid item xs={12} sm={6}>
-            <Typography className={classes.sectionTitle} variant='h6' align='center'>
-              <Link variant='body2' component='button' onClick={()=> setView('register')}>
-                First-Time Student
-              </Link>
-            </Typography>
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <Typography className={classes.sectionTitle} variant='h6' align='center'>
-            <Link variant='body2' component='button' onClick={()=> setView('login')}>
-              Returning Student
-            </Link>
-            </Typography>
-          </Grid>
+    <Paper className={classes.root}>
+      <Typography variant='h4' align='center' gutterBottom>
+        Welcome! Choose an option below
+      </Typography>
+      <Grid container>
+        <Grid item xs={12} sm={6}>
+          <Button className={classes.button} variant='contained' color='primary' onClick={()=> setView('register')}>
+            First-Time Student
+          </Button>
         </Grid>
-      </Paper>
-    </Container>
+        <Grid item xs={12} sm={6}>
+          <Button className={classes.button} variant='contained' color='secondary' onClick={()=> setView('login')}>
+            Returning Student
+          </Button>
+        </Grid>
+      </Grid>
+    </Paper>
   );
 };
+
+Landing.propTypes = {
+  setView: PropTypes.func.required
+}
 
 export default Landing;
