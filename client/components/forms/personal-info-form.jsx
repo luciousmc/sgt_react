@@ -16,6 +16,7 @@ const PersonalInfoForm = ({
   middleInitialVal,
   lastNameVal,
   ssnVal,
+  birthDateVal,
   phoneVal,
   emailVal,
   addressVal,
@@ -70,6 +71,53 @@ const PersonalInfoForm = ({
           />
         </Grid>
         
+        <Grid item xs={6}>
+          <TextField
+            required
+            name='birthDate'
+            type='date'
+            InputLabelProps={{ shrink: true }}
+            label='Birth Date'
+            id='birthDate'
+            onChange={changeFunc}
+            value={birthDateVal}
+            fullWidth
+          />
+        </Grid>
+        <Grid item xs={6}>
+          <TextField
+            required
+            name='ssn'
+            label='Social Security #'
+            id='ssn'
+            onChange={changeFunc}
+            value={ssnVal}
+            fullWidth
+          />
+        </Grid>
+
+        <Grid item xs={6}>
+          <TextField
+            name='email'
+            label='Email'
+            id='email'
+            onChange={changeFunc}
+            value={emailVal}
+            fullWidth
+          />
+        </Grid>
+        <Grid item xs={6}>
+          <TextField
+            required
+            name='phone'
+            label='Tel #'
+            id='phone'
+            onChange={changeFunc}
+            value={phoneVal}
+            fullWidth
+          />
+        </Grid>
+
         <Grid item xs={12}>
           <TextField
             required
@@ -125,6 +173,7 @@ PersonalInfoForm.propTypes = {
   middleInitialVal: PropTypes.string,
   lastNameVal: PropTypes.string.isRequired,
   ssnVal: PropTypes.string.isRequired,
+  birthDateVal: PropTypes.string.isRequired,
   phoneVal: PropTypes.string.isRequired,
   emailVal: PropTypes.string.isRequired,
   addressVal: PropTypes.string.isRequired,

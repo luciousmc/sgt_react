@@ -7,7 +7,7 @@
 - [x] First Name
 - [x] Middle Initial
 - [x] Last Name
-- [x] S.S.N.
+- [ ] S.S.N.
 - [ ] D.O.B.
 - [ ] Phone Number
 - [x] Address

@@ -7,6 +7,7 @@ const PersonalInfoContainer = () => {
     middleInitial: '',
     lastName: '',
     ssn: '',
+    birthDate: '',
     phone: '',
     email: '',
     address: '',
@@ -19,7 +20,7 @@ const PersonalInfoContainer = () => {
     setPersonalInfo(prevState => ({ ...prevState, [name]: value }));
   };
 
-  const { firstName, middleInitial, lastName, ssn, phone, email, address, city, state, zipCode } = personalInfo;
+  const { firstName, middleInitial, lastName, ssn, birthDate, phone, email, address, city, state, zipCode } = personalInfo;
 
   return(
     <PersonalInfoForm
@@ -27,6 +28,7 @@ const PersonalInfoContainer = () => {
       firstNameVal={firstName}
       middleInitialVal={middleInitial}
       lastNameVal={lastName}
+      birthDateVal={birthDate}
       ssnVal={ssn}
       phoneVal={phone}
       emailVal={email}
