@@ -15,7 +15,7 @@ const Header = () => {
   const classes = useStyles();
 
   return(
-    <AppBar className={classes.root}>
+    <AppBar className={classes.root} position='static'>
       <Typography variant="h4" component="h1">
         Coast Health Community College CEU Registration
       </Typography>
