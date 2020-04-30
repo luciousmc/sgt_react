@@ -96,28 +96,6 @@ const PersonalInfoForm = ({
           />
         </Grid>
 
-        <Grid item xs={6}>
-          <TextField
-            name='email'
-            label='Email'
-            id='email'
-            onChange={changeFunc}
-            value={emailVal}
-            fullWidth
-          />
-        </Grid>
-        <Grid item xs={6}>
-          <TextField
-            required
-            name='phone'
-            label='Tel #'
-            id='phone'
-            onChange={changeFunc}
-            value={phoneVal}
-            fullWidth
-          />
-        </Grid>
-
         <Grid item xs={12}>
           <TextField
             required
@@ -160,6 +138,28 @@ const PersonalInfoForm = ({
             id='zipCode'
             onChange={changeFunc}
             value={zipCodeVal}
+            fullWidth
+          />
+        </Grid>
+
+        <Grid item xs={6}>
+          <TextField
+            name='email'
+            label='Email'
+            id='email'
+            onChange={changeFunc}
+            value={emailVal}
+            fullWidth
+          />
+        </Grid>
+        <Grid item xs={6}>
+          <TextField
+            required
+            name='phone'
+            label='Tel #'
+            id='phone'
+            onChange={changeFunc}
+            value={phoneVal}
             fullWidth
           />
         </Grid>
