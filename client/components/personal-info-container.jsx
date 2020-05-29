@@ -23,7 +23,7 @@ const PersonalInfoContainer = () => {
   
   return(
     <PersonalInfoForm
-      changeFunc={handleChange}
+      handleChange={handleChange}
       firstNameVal={firstName}
       middleInitialVal={middleInitial}
       lastNameVal={lastName}
