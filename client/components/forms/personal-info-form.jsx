@@ -11,7 +11,7 @@ const useStyles = makeStyles({
 });
 
 const PersonalInfoForm = ({
-  changeFunc,
+  handleChange,
   firstNameVal,
   middleInitialVal,
   lastNameVal,
@@ -45,7 +45,7 @@ const PersonalInfoForm = ({
             name='firstName'
             label='First Name'
             id='firstName'
-            onChange={changeFunc}
+            onChange={handleChange}
             value={firstNameVal}
             fullWidth
           />
@@ -55,7 +55,7 @@ const PersonalInfoForm = ({
             name='middleInitial'
             label='M.I.'
             id='middleInitial'
-            onChange={changeFunc}
+            onChange={handleChange}
             value={middleInitialVal}
           />
         </Grid>
@@ -65,7 +65,7 @@ const PersonalInfoForm = ({
             name='lastName'
             label='Last Name'
             id='lastName'
-            onChange={changeFunc}
+            onChange={handleChange}
             value={lastNameVal}
             fullWidth
           />
@@ -79,7 +79,7 @@ const PersonalInfoForm = ({
             InputLabelProps={{ shrink: true }}
             label='Birth Date'
             id='birthDate'
-            onChange={changeFunc}
+            onChange={handleChange}
             value={birthDateVal}
             fullWidth
           />
@@ -90,30 +90,8 @@ const PersonalInfoForm = ({
             name='ssn'
             label='Social Security #'
             id='ssn'
-            onChange={changeFunc}
+            onChange={handleChange}
             value={ssnVal}
-            fullWidth
-          />
-        </Grid>
-
-        <Grid item xs={6}>
-          <TextField
-            name='email'
-            label='Email'
-            id='email'
-            onChange={changeFunc}
-            value={emailVal}
-            fullWidth
-          />
-        </Grid>
-        <Grid item xs={6}>
-          <TextField
-            required
-            name='phone'
-            label='Tel #'
-            id='phone'
-            onChange={changeFunc}
-            value={phoneVal}
             fullWidth
           />
         </Grid>
@@ -124,7 +102,7 @@ const PersonalInfoForm = ({
             name='address'
             label='Address'
             id='address'
-            onChange={changeFunc}
+            onChange={handleChange}
             value={addressVal}
             fullWidth
           />
@@ -136,7 +114,7 @@ const PersonalInfoForm = ({
             name='city'
             label='City'
             id='city'
-            onChange={changeFunc}
+            onChange={handleChange}
             value={cityVal}
             fullWidth
           />
@@ -147,7 +125,7 @@ const PersonalInfoForm = ({
             name='state'
             label='State'
             id='state'
-            onChange={changeFunc}
+            onChange={handleChange}
             value={stateVal}
             fullWidth
           />
@@ -158,8 +136,30 @@ const PersonalInfoForm = ({
             name='zipCode'
             label='Zip Code'
             id='zipCode'
-            onChange={changeFunc}
+            onChange={handleChange}
             value={zipCodeVal}
+            fullWidth
+          />
+        </Grid>
+
+        <Grid item xs={6}>
+          <TextField
+            name='email'
+            label='Email'
+            id='email'
+            onChange={handleChange}
+            value={emailVal}
+            fullWidth
+          />
+        </Grid>
+        <Grid item xs={6}>
+          <TextField
+            required
+            name='phone'
+            label='Tel #'
+            id='phone'
+            onChange={handleChange}
+            value={phoneVal}
             fullWidth
           />
         </Grid>
@@ -180,7 +180,7 @@ PersonalInfoForm.propTypes = {
   cityVal: PropTypes.string.isRequired,
   stateVal: PropTypes.string.isRequired,
   zipCodeVal: PropTypes.string.isRequired,
-  changeFunc: PropTypes.func.isRequired
+  handleChange: PropTypes.func.isRequired
 }
 
 export default PersonalInfoForm;

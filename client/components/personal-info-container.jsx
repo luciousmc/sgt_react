@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { PersonalInfoForm } from './forms';
+import useFormValidation from './custom-hooks/useFormValidation';
 
 const PersonalInfoContainer = () => {
-  const [ personalInfo, setPersonalInfo ] = useState({
+  const INITIAL_STATE = {
     firstName: '',
     middleInitial: '',
     lastName: '',
@@ -14,17 +15,15 @@ const PersonalInfoContainer = () => {
     city: '',
     state: '',
     zipCode: ''
-  });
+  }
 
-  const handleChange = ({ target: { name, value } }) => {    
-    setPersonalInfo(prevState => ({ ...prevState, [name]: value }));
-  };
+  const { handleChange, values } = useFormValidation(INITIAL_STATE);
 
-  const { firstName, middleInitial, lastName, ssn, birthDate, phone, email, address, city, state, zipCode } = personalInfo;
-
+  const { firstName, middleInitial, lastName, ssn, birthDate, phone, email, address, city, state, zipCode } = values;
+  
   return(
     <PersonalInfoForm
-      changeFunc={handleChange}
+      handleChange={handleChange}
       firstNameVal={firstName}
       middleInitialVal={middleInitial}
       lastNameVal={lastName}
